@@ -1,0 +1,143 @@
+body {
+    background: var(--cor-de-fundo);
+    margin-bottom: 20px ;
+    overflow: hidden;
+}
+
+.login {
+    align-items: center;
+    text-align: center;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4em;
+}
+
+.login__titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    font-family: var(--fonte-principal);
+    font-weight: 700;
+    font-size: 36px;
+    color: white;
+}
+
+.login__usuario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.login__usuario-ra {
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 24px;
+    padding: 0.5em;    
+    width: 400px;
+    height: 25px;
+    outline: 0;
+    font-size: 20px;
+}
+
+.login__usuario-ra::placeholder {
+    color: white;
+    font-family: var(--fonte-principal);
+    background: url(/img/Usuario.svg) no-repeat;
+    background-size: 25px;
+    background-position: 0.5em;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 20px;
+}
+
+.login__senha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+   
+}
+
+.login__senha-senha {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 24px;
+    padding: 0.5em;    
+    height: 25px;
+    width: 400px;
+    text-align: center;
+    outline: 0;
+    font-size: 20px;
+}
+
+.login__senha-senha::placeholder {
+    color: white;
+    font-family: var(--fonte-principal);
+    background: url(/img/Lock.svg) no-repeat; 
+    background-size: 25px 25px;
+    background-position: 0.5em;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 20px;
+    
+}
+
+.end{
+    padding: 25px;
+    margin-left: 100px;
+    text-align: center;
+    position: relative;
+}
+
+.box{
+    font-size: 20px;
+    border-color: #003052;
+    border-radius: 20px;
+    background-color: #00243e;
+    width: 150px;   
+    padding: 10px;
+    border: 2px solid #18496D;
+    color: white;
+    font-family: var(--fonte-principal);
+    margin-left: 10px;
+
+}
+
+.box:hover{
+    transform: scale(1.10);
+    transition: 0.15s;
+    cursor: pointer;
+}
+
+.end a{
+    color: black;
+    color: whitesmoke;
+    text-decoration: none;
+    padding-left: 10px;
+    font-family: var(--fonte-principal);
+    font-size: small;
+}
+
+
+
+.senha__eye {
+    margin-left: 1em;
+}
+
+.bi {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    display: block;
+    right: 33%;
+}

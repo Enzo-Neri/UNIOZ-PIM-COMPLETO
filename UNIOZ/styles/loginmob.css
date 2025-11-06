@@ -1,0 +1,43 @@
+@media screen and ( max-width: 1024px) {
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login__usuario{
+    width: 270px;
+}
+
+.login__senha{
+    width: 270px;
+}
+
+.end{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+}
+
+.end a{
+    margin-top: 10px;
+}
+
+.bi {
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    right: 19%;
+}
+
+}

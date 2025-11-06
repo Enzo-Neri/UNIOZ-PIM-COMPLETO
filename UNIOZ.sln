@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MeuChatBackend", "MeuChatBackend", "{08B23296-E374-369A-2212-86F07F5A0C40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuChatBackend", "MeuChatBackend\MeuChatBackend\MeuChatBackend.csproj", "{3D01AB38-E6F0-43C5-2439-56070BDD01E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D01AB38-E6F0-43C5-2439-56070BDD01E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D01AB38-E6F0-43C5-2439-56070BDD01E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D01AB38-E6F0-43C5-2439-56070BDD01E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D01AB38-E6F0-43C5-2439-56070BDD01E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3D01AB38-E6F0-43C5-2439-56070BDD01E4} = {08B23296-E374-369A-2212-86F07F5A0C40}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6842DF42-AC2B-435F-9DF5-5BE7CB750609}
+	EndGlobalSection
+EndGlobal

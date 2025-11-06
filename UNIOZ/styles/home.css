@@ -1,0 +1,412 @@
+body{
+    font-family: var(--fonte-principal);
+    font-size: 10px;
+    color: white ;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+}
+
+header{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    font-size: 15px;
+ 
+}
+
+main{
+    flex-grow: 1;
+
+}
+.left{
+    width: 33%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.left a{
+    padding: 0 30px 0 30px;
+}
+
+.mid{
+    width: 33%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.right{
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.right a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right img{
+    width: 30px;
+}
+
+header img{
+    width: 120px;
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    display: inline;
+
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 30px 0;
+    padding-top: 30px;
+}
+
+.banner__container {
+    padding: 0px;
+}
+
+.banner input {
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 20px;
+    padding: 1em;
+    width: 400px;
+    height: 20px;
+}
+
+.banner input::placeholder {
+    color: white;
+    font-family: var(--fonte-principal);
+    background: url(/img/robot.svg) no-repeat;
+    background-size: 20px;
+    background-position: 110px;
+    text-align: center;
+    padding-left: 30px;
+}
+
+.banner h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.banner p {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.titulo {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ h2 {
+    color: #002F52;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.chat {
+    width: 40px;
+    height: 40px;
+    position: absolute;     
+    margin: 150px 30px 0 1080px;
+    background-color: #002F52;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-img {
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+    background-image: url(/img/robot.svg);
+}
+
+
+
+
+/* Reset básico */
+
+
+/* Container da seção */
+.chamados-container {
+  max-width: 100%;
+
+  
+}
+
+.chamados-container h2 {
+  text-align: center;
+  color: #002f52;
+  font-size: 50px;
+  font-style: var(--fonte-principal);
+  letter-spacing: 1px;
+  background-color: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Responsividade da tabela */
+.table-wrapper {
+    width: 100%;
+  overflow-x: auto;
+  color: black;
+  background: whitesmoke;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-size: 15px;
+}
+
+/* Estilo da tabela */
+#tabela-chamados {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px; /* garante visual mesmo em telas grandes */
+}
+
+#tabela-chamados th,
+#tabela-chamados td {
+  padding: 1.3rem;
+   color: black;
+  text-align: center;
+  border: 1px solid #ddd;
+  white-space: nowrap;
+  text-decoration: underline;
+  padding: 30px;
+
+
+}
+
+#tabela-chamados th{
+    border-top: none;
+    font-size: 18px;
+}
+
+/*Deixa a tabela com todas as colunas do mesmo tamanho*/
+th{
+    width: 20%;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#TdYellow{
+    color: #e9a100;
+    display: flex;
+    justify-content: center;
+}
+
+#TdGreen{
+    color: #2bb673;
+    display: flex;
+    justify-content: center;
+}
+
+td a:hover{
+    transform: scale(1.10);
+    transition: 0.3s;
+
+}
+
+
+
+#tabela-chamados thead {
+  background: whitesmoke;
+  color: #fff;
+}
+
+#tabela-chamados tr:hover {
+  background: #f1f5fa;
+}
+
+/* Status colorido */
+.status.analise {
+  color: #e9a100;
+  font-weight: bold;
+}
+
+.status.finalizado {
+  color: #2bb673;
+  font-weight: bold;
+}
+
+/*chat bot*/
+
+/* Estilos básicos do botão */
+/* Estilo do botão flutuante */
+#abrirChat {
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+/* --- ESTILOS DA JANELA DO CHAT --- */
+
+/* A janela principal */
+#janelaChat {
+    /* display: none; -> controlado pelo JavaScript */
+    position: fixed;
+    bottom: 110px;
+    right: 70px;
+    width: 350px;
+    max-height: 550px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border: 1px solid #ccc;
+
+
+    /* Organiza o layout interno (cabeçalho e corpo) */
+    display: flex;
+    flex-direction: column;
+}
+
+/* O cabeçalho da janela */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #002f52;
+    border-bottom: 1px solid #ddd;
+    border-radius: 10px 10px 0 0;
+}
+
+.chat-header p {
+    margin: 0;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* O corpo principal que contém mensagens e o campo de texto */
+.chat-body {
+    flex-grow: 1; /* Faz o corpo ocupar o espaço disponível */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Garante que o conteúdo não vaze */
+}
+
+/* A área onde as mensagens são exibidas */
+#areaDasMensagens {
+    flex-grow: 1; /* Ocupa o espaço, empurrando o textarea para baixo */
+    overflow-y: auto; /* Adiciona scroll se as mensagens ultrapassarem a altura */
+    padding: 15px;
+    background-color: #f9f9f9;
+
+    /* Essencial para alinhar as mensagens */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaço entre as mensagens */
+}
+
+/* Estilo para as mensagens do sistema (bot) */
+.mensagem-sistema {
+    align-self: flex-start; /* Alinha à esquerda */
+    background-color: #e9e9eb;
+    color: #000000;
+    padding: 8px 12px;
+    border-radius: 15px;
+    border-bottom-left-radius: 3px;
+    max-width: 80%;
+    margin: 0;
+}
+
+/* Estilo para as mensagens do usuário */
+.mensagem-usuario {
+    align-self: flex-end; /* Alinha à direita */
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 15px;
+    border-bottom-right-radius: 3px;
+    max-width: 80%;
+    margin: 0;
+}
+
+
+/* O campo de texto para digitar a mensagem */
+#entradaDoChat {
+    border: none;
+    border-top: 1px solid #ddd;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+    resize: none; /* Impede que o usuário mude o tamanho */
+    min-height: 50px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+#entradaDoChat:focus {
+    outline: none; /* Remove a borda azul ao clicar */
+}
+
+
+
+footer{
+    color: #002F52;
+    background-color: white;
+    padding: 60px;
+    text-align: center;
+    border-top: 1px solid black;
+    margin:  0;
+}
+
+footer h2{
+    font-size: 25px;
+}
+
+
+/* Responsivo para celular */
+@media (max-width: 700px) {
+  .tabela-chamados th, 
+  .tabela-chamados td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.9rem;
+    width: 10%;
+  }
+
+  .tabela-chamados,
+  .table-wrapper{   
+    display: flex;
+    flex-direction: column;
+    
+  }
+}
+
+
+

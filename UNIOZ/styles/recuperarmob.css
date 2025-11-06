@@ -1,0 +1,86 @@
+@media screen and (max-width: 1024px) {
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0 20px 0;
+    overflow: hidden;
+}
+
+h2 {
+    display: none;
+}
+
+.left img {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 300px;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 16px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left h1 {
+    margin: 30px 0 30px 0;
+    font-size: 30px;
+}
+
+button {
+    margin: 30px 0 30px 0;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fonte-principal);
+    font-size: 20px;
+}
+
+.login::placeholder {
+    background-position: 0.3em;
+}
+
+.email::placeholder {
+    background-position: 0.3em;
+}
+
+.tell::placeholder {
+    background-position: 0.3em;
+}
+
+.senha::placeholder {
+    background-position: 0.3em;
+}
+
+.newsenha::placeholder {
+    background-position: 0.3em;
+}
+
+.botoes input {
+    margin: 4px 0 11px 0;
+    width: 20px;
+}
+
+.mostrar__senha {
+    margin: 0 0 0 20px;
+}
+
+.botoes p {
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.botoes {
+    margin-left: 100px;
+}
+
+}

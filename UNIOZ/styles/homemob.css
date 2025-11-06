@@ -1,0 +1,20 @@
+@media screen and (max-width: 1024px) {
+
+    body{
+        overflow: hidden;
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+    header a{
+        font-size: 6px;
+        text-align: center;
+
+    }
+    
+    header{
+        display: flex;
+        justify-content: space-around;
+    }
+}

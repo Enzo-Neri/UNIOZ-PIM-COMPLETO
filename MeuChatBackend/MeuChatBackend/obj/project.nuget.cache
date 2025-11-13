@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "h+h9m78bbwA=",
+  "dgSpecHash": "TMh/882K7Xo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\enzon\\Desktop\\PASTAS VSCODE\\UNIOZ\\MeuChatBackend\\MeuChatBackend\\MeuChatBackend.csproj",
+  "projectFilePath": "C:\\Users\\enzon\\UNIOZ-PIM-COMPLETO\\MeuChatBackend\\MeuChatBackend\\MeuChatBackend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\enzon\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\enzon\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

@@ -1,14 +1,14 @@
-// newPass.js
+// newPass.js 
 document.addEventListener('DOMContentLoaded', () => {
     const newPassForm = document.getElementById('newPassForm');
     const senhaInput = document.getElementById('senhaInput');
     const confirmarSenhaInput = document.getElementById('confirmarSenhaInput');
     const mensagemDiv = document.getElementById('mensagem');
 
-    // Pegamos o "Passe Livre" (JWT) que salvamos na página anterior
+    
     const resetToken = sessionStorage.getItem('resetToken');
 
-    // Se não tem token, nem adianta, manda pro login
+    
     if (!resetToken) {
         mensagemDiv.textContent = 'Token de redefinição não encontrado. Redirecionando...';
         mensagemDiv.style.color = 'red';
@@ -30,19 +30,19 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        if (novaSenha.length < 6) { // Adicione sua regra de senha aqui
+        if (novaSenha.length < 6) { // REGRA DA SENHA DE 6 CARACTERES
             mensagemDiv.textContent = 'A senha deve ter pelo menos 6 caracteres.';
             mensagemDiv.style.color = 'red';
             return;
         }
 
-        // 2. Chamar a API (a rota [Authorize])
+        // 2. Chama a API (a rota [Authorize])
         try {
             const response = await fetch('http://localhost:5234/api/recuperarsenha/redefinir', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    // AQUI está a mágica: enviamos o "Passe Livre"
+                    
                     'Authorization': `Bearer ${resetToken}`
                 },
                 body: JSON.stringify({
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (response.ok) {
-                // Deu certo!
+                
                 sessionStorage.removeItem('resetToken'); // Limpa o token usado
                 mensagemDiv.textContent = 'Senha redefinida com sucesso! Redirecionando...';
                 mensagemDiv.style.color = 'green';

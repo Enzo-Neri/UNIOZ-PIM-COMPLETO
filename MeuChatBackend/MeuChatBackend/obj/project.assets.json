@@ -4661,11 +4661,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\enzon\\Desktop\\PASTAS VSCODE\\UNIOZ\\MeuChatBackend\\MeuChatBackend\\MeuChatBackend.csproj",
+      "projectUniqueName": "C:\\Users\\enzon\\UNIOZ-PIM-COMPLETO\\MeuChatBackend\\MeuChatBackend\\MeuChatBackend.csproj",
       "projectName": "MeuChatBackend",
-      "projectPath": "C:\\Users\\enzon\\Desktop\\PASTAS VSCODE\\UNIOZ\\MeuChatBackend\\MeuChatBackend\\MeuChatBackend.csproj",
+      "projectPath": "C:\\Users\\enzon\\UNIOZ-PIM-COMPLETO\\MeuChatBackend\\MeuChatBackend\\MeuChatBackend.csproj",
       "packagesPath": "C:\\Users\\enzon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\enzon\\Desktop\\PASTAS VSCODE\\UNIOZ\\MeuChatBackend\\MeuChatBackend\\obj\\",
+      "outputPath": "C:\\Users\\enzon\\UNIOZ-PIM-COMPLETO\\MeuChatBackend\\MeuChatBackend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

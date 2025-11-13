@@ -18,8 +18,9 @@ H1{
 
 button {
     position: relative;
- 
-    font-size: 30px;
+    font-size: 20px;
+  
+    margin: 15px 50px 0 90px ;
     border-color: #003052;
     border-radius: 20px;
     background-color: #00243e;

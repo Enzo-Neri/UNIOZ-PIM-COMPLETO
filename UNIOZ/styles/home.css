@@ -22,16 +22,22 @@ main{
     flex-grow: 1;
 
 }
+
+
 .left{
     width: 33%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-size:15px;
 
 }
 
 .left a{
     padding: 0 30px 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .mid{

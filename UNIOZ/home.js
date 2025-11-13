@@ -22,7 +22,7 @@ const faq = {
     '5': "Para cancelar sua matricula ou trancar seu curso, é necessário apresentar presencialmente todos os documentos que foram levados no dia de inscrição."
 };
 
-// --- Funções Auxiliares ---
+// Funções Auxiliares
 
 function adicionarNovaMensagem(texto, type) {
     const novaMensagem = document.createElement('p');
@@ -39,8 +39,7 @@ function adicionarChamadoNaTabela(chamado) {
     const dataCriacaoFormatada = new Date(chamado.dataCriacao).toLocaleString('pt-BR');
     const dataAtualizacaoFormatada = new Date(chamado.ultimaAtualizacao).toLocaleString('pt-BR');
 
-    // --- CORREÇÃO DE EXIBIÇÃO 1 ---
-    // Agora ele mostra o status real que vem do banco e escolhe a cor certa.
+    // Aqui mostra se o status do chamado está em aberto ou resolvido.
     let statusHTML;
     if (chamado.status === 'Resolvido' || chamado.status === 'Fechado') {
         statusHTML = `<a id="TdGreen" href="#"> <img src="img/check.svg" alt="${chamado.status}" width="10px"> ${chamado.status}</a>`;
@@ -74,8 +73,8 @@ async function atualizarStatusDoChamado(id, novoStatus) {
         });
 
         if (!response.ok) {
-            // Tenta ler a mensagem de erro da API que fizemos no C#
-            const errorText = await response.text(); 
+            // Tenta ler a mensagem de erro da API que está no C#
+            const errorText = await response.text();
             console.error('API Error:', errorText);
             throw new Error(errorText || 'Falha ao atualizar o status na API');
         }
@@ -89,14 +88,12 @@ async function atualizarStatusDoChamado(id, novoStatus) {
         const statusCell = linhaDoChamado.querySelector('.status-cell');
         const atualizacaoCell = linhaDoChamado.cells[4];
 
-        // --- CORREÇÃO DE EXIBIÇÃO 2 ---
-        // Mostra o status real que veio da API (ex: "Resolvido")
         statusCell.innerHTML = `<a id="TdGreen" href="#"> <img src="img/check.svg" alt="${chamadoAtualizado.status}" width="10px"> ${chamadoAtualizado.status}</a>`;
         atualizacaoCell.textContent = new Date(chamadoAtualizado.ultimaAtualizacao).toLocaleString('pt-BR');
 
     } catch (error) {
         console.error("Erro ao atualizar status:", error);
-        // Mostra o erro que veio da API (ex: "Status inválido...")
+
         adicionarNovaMensagem(`Não foi possível atualizar o status do chamado. (Erro: ${error.message})`, 'sistema');
     }
 }
@@ -108,7 +105,7 @@ async function carregarChamadosDoUsuario() {
     const token = localStorage.getItem('userToken');
     if (!token) {
         console.error("Nenhum token encontrado. Faça o login.");
-        // window.location.href = '/login.html'; 
+
         return;
     }
 
@@ -221,14 +218,13 @@ campoInput.addEventListener('keydown', async (event) => {
                     const respostaFinal = mensagemUsuario.toLowerCase();
                     if (respostaFinal.includes('sim')) {
                         adicionarNovaMensagem("Que ótimo! Seu chamado será marcado como resolvido.", 'sistema');
-                        
-                        // --- A CORREÇÃO PRINCIPAL ---
-                        // Trocamos 'Finalizado' por 'Resolvido', que está na "lista VIP" do banco.
+
+
                         atualizarStatusDoChamado(chamadoAtualID, 'Resolvido');
 
                     } else {
                         adicionarNovaMensagem("Ok. Um atendente dará continuidade ao seu chamado em breve.", 'sistema');
-                        // Não fazemos nada, o status continua "Aberto"
+
                     }
                     campoInput.disabled = true;
                     campoInput.placeholder = "Atendimento encerrado.";
@@ -239,15 +235,12 @@ campoInput.addEventListener('keydown', async (event) => {
     }
 });
 
-/**
- * Decodifica um token JWT (que está no localStorage)
- * para ler as informações (claims) de dentro dele.
- */
+
 function parseJwt(token) {
     try {
         const base64Url = token.split('.')[1];
         const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-        const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+        const jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
             return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
         }).join(''));
 
